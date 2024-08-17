@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "SSS",
+    "version": "1.0",
+    "description": "Improve echro 360.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "declarativeContent"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.uq.edu/course/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
